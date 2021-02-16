@@ -1,0 +1,48 @@
+.footer-background {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--background-footer);
+}
+
+.footer-block {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer-left {
+  margin-right: 70px;
+}
+
+.footer-address {
+  font-style: normal;
+  line-height: 1.71;
+  margin-top: 20px;
+}
+
+.address {
+  color: var(--text-title-button-color);
+  margin-top: 0px;
+  margin-bottom: 9px;
+}
+
+.logo-studio {
+  color: var(--text-title-button-color);
+}
+
+.contacts {
+  flex-direction: column;
+}
+
+.footer-contacts:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.contacts .footer-link {
+  text-decoration: none;
+  color: var(--footer-text-color);
+}
+
+.contacts .footer-link:hover,
+.contacts .footer-link:focus {
+  color: var(--button-hover-color);
+}
