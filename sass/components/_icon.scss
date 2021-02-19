@@ -1,33 +1,33 @@
 .icon-group {
-  width: 206px;
+    width: 206px;
 }
 
 .icon-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  @include br(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    @include br(50%);
 
-  &:hover,
-  &:focus {
-    background-color: var(--button-hover-color);
-    @include transit(background-color $when $how);
-  }
+    &:hover,
+    &:focus {
+        background-color: var(--button-hover-color);
+        @include transit(background-color);
+    }
 
-  &:hover .team-icon,
-  &:focus .team-icon {
-    fill: var(--text-title-button-color);
-    @include transit(fill $when $how);
-  }
+    &:hover .team-icon,
+    &:focus .team-icon {
+        fill: var(--text-title-button-color);
+        @include transit(fill);
+    }
 }
 
 .socials {
-  width: 44px;
-  height: 44px;
+    width: 44px;
+    height: 44px;
 
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
 }
