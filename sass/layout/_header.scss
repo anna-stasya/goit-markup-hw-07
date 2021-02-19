@@ -3,71 +3,67 @@
   align-items: center;
 }
 
-.container.hat {
-  position: relative;
-  border-bottom: 1px solid #ececec;
-}
-
-.nav.current::after {
-  content: "";
-  display: flex;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background: #2196f3;
-  border-radius: 2px;
-}
-
-.logo {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-  color: var(--color-black);
-  margin-right: 93px;
-}
-
-.logo-web {
-  color: var(--button-hover-color);
-}
-
 .nav {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transit(color $when $how);
   margin-bottom: -1px;
+
+  &.current::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: #2196f3;
+    border-radius: 2px;
+  }
 }
 
-.site .item:not(:last-child) {
-  margin-right: 40px;
-}
+.site {
+  & .item:not(:last-child) {
+    margin-right: 40px;
+  }
 
-.site .link {
-  color: var(--main-text-color);
-}
+  & .link {
+    color: var(--main-text-color);
+  }
 
-.site .link.current {
-  color: var(--button-hover-color);
-  position: relative;
-}
+  & .link.current {
+    color: var(--button-hover-color);
+    position: relative;
+  }
 
-.site .link:hover,
-.site .link:focus {
-  color: var(--button-hover-color);
+  & .link:hover,
+  & .link:focus {
+    color: var(--button-hover-color);
+  }
 }
 
 .auth {
   margin-left: auto;
   align-items: center;
-}
 
-.auth .nav {
-  display: flex;
-  align-items: center;
+  & .nav {
+    display: flex;
+    align-items: center;
+  }
+
+  & .item:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  & .link {
+    color: var(--paragraph-color);
+
+    &:hover,
+    &:focus {
+      color: var(--button-hover-color);
+    }
+  }
 }
 
 .icons-contact:hover .icons-header,
@@ -78,18 +74,5 @@
 .icons-header {
   fill: var(--paragraph-color);
   margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.auth .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.auth .link {
-  color: var(--paragraph-color);
-}
-
-.auth .link:hover,
-.auth .link:focus {
-  color: var(--button-hover-color);
+  @include transit(fill $when $how);
 }

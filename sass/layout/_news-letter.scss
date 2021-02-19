@@ -40,7 +40,7 @@
   text-align: center;
   letter-spacing: 0.06em;
 
-  border-radius: 4px;
+  @include br(4px);
   border: none;
   cursor: pointer;
   color: var(--text-title-button-color);

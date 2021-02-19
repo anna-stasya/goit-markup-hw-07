@@ -25,24 +25,20 @@
   margin-bottom: 9px;
 }
 
-.logo-studio {
-  color: var(--text-title-button-color);
-}
-
 .contacts {
   flex-direction: column;
+
+  & .footer-link {
+    text-decoration: none;
+    color: var(--footer-text-color);
+
+    &:hover,
+    &:focus {
+      color: var(--button-hover-color);
+    }
+  }
 }
 
 .footer-contacts:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.contacts .footer-link {
-  text-decoration: none;
-  color: var(--footer-text-color);
-}
-
-.contacts .footer-link:hover,
-.contacts .footer-link:focus {
-  color: var(--button-hover-color);
 }

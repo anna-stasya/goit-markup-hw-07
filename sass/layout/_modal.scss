@@ -7,14 +7,14 @@
 
   border: none;
   z-index: 1;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include transit($what $when $how);
   background: rgba(0, 0, 0, 0.2);
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .hero-modal {
@@ -34,7 +34,7 @@
   background-color: var(--text-title-button-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  @include br(4px);
 }
 
 /*=====================button close==================*/
@@ -55,11 +55,11 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-}
 
-.circle-icon:hover,
-.circle-icon:focus {
-  fill: var(--button-hover-color);
+  &:hover,
+  &:focus {
+    fill: var(--button-hover-color);
+  }
 }
 
 /* =======================modal-form==================== */
@@ -80,10 +80,10 @@
 
 .modal-wrapper {
   position: relative;
-}
 
-.modal-wrapper:not(:last-child) {
-  margin-bottom: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .label-title {
@@ -102,12 +102,12 @@
   box-sizing: border-box;
   border-radius: 4px;
   padding-left: 42px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @include transit(border-color $when $how);
 
-.modal-wrapper:focus-within .input-modal-form {
-  outline: none;
-  border-color: var(--button-hover-color);
+  .modal-wrapper:focus-within & {
+    outline: none;
+    border-color: var(--button-hover-color);
+  }
 }
 
 .modal-icons {
@@ -116,11 +116,11 @@
   left: 12px;
   transform: translateY(-50%);
   display: block;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+  @include transit(fill $when $how);
 
-.modal-wrapper:focus-within .modal-icons {
-  fill: var(--button-hover-color);
+  .modal-wrapper:focus-within & {
+    fill: var(--button-hover-color);
+  }
 }
 
 /* =======================comment-blok==================== */
@@ -137,10 +137,10 @@
   padding-top: 12px;
   padding-left: 16px;
   margin-bottom: 20px;
-}
 
-.comment-blok:focus {
-  color: var(--color-black);
+  &:focus {
+    color: var(--color-black);
+  }
 }
 
 /* =======================checkbox==================== */
@@ -154,29 +154,29 @@
   flex-wrap: wrap;
   line-height: 1.71;
   margin-bottom: 30px;
-}
 
-.checkbox-label::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--main-text-color);
-  border-radius: 4px;
-}
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--main-text-color);
+    border-radius: 4px;
 
-.checkbox-input:checked + .checkbox-label::before {
-  background-size: contain;
-  border: 2px solid var(--main-text-color);
-  background-color: var(--button-hover-color);
-  border-color: var(--button-hover-color);
-  background-image: url("../img/icon-check.svg");
-}
+    .checkbox-input:checked + & {
+      background-size: contain;
+      border: 2px solid var(--main-text-color);
+      background-color: var(--button-hover-color);
+      border-color: var(--button-hover-color);
+      background-image: url("../img/icon-check.svg");
+    }
 
-.checkbox-input:focus + .checkbox-label::before {
-  box-shadow: 0 0 0 1px var(--button-hover-color);
-  background-origin: border-box;
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .checkbox-input:focus + & {
+      box-shadow: 0 0 0 1px var(--button-hover-color);
+      background-origin: border-box;
+      @include transit($what $when $how);
+    }
+  }
 }
 
 .checkbox-icon-border {

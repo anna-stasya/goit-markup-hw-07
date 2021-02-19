@@ -27,10 +27,10 @@
   width: 370px;
   height: 70px;
   background: rgba(47, 48, 58, 0.8);
-}
 
-.thumb-animation:hover .thumb-work {
-  transform: translateX(0);
+  .thumb-animation:hover & {
+    transform: translateX(0);
+  }
 }
 
 .text-work {

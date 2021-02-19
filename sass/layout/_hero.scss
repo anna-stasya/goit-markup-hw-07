@@ -1,7 +1,6 @@
 .hero {
   margin-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  @include push--auto;
   padding-top: 200px;
   padding-bottom: 200px;
   max-width: 1600px;
@@ -20,8 +19,7 @@
   text-align: center;
   align-content: center;
   max-width: 694px;
-  margin-left: auto;
-  margin-right: auto;
+  @include push--auto;
 }
 
 .hero-title {
