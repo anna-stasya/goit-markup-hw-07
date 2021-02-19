@@ -19,18 +19,18 @@
     text-align: center;
     cursor: pointer;
     border: none;
-    color: var(--main-text-color);
-    background-color: var(--button-background-color);
     @include transit(color $when $how),
       @include transit(background-color $when $how),
       @include transit(box-shadow $when $how);
-        
-    &: hover,
-    &: focus {
-    color: var(--text-title-button-color);
-    background-color: var(--button-hover-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
-      0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    color: var(--main-text-color);
+    background-color: var(--button-background-color);
+
+    & :hover,
+    & :focus {
+      color: var(--text-title-button-color);
+      background-color: var(--button-hover-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     }
   }
 }
