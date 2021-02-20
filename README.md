@@ -1,3 +1,3 @@
-# goit-markup-hw-07  :woman_technologist:
+# goit-markup-hw-06 :owl:
 
-https://anna-stasya.github.io/goit-markup-hw-07/
+https://anna-stasya.github.io/goit-markup-hw-06/

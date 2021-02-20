@@ -18,7 +18,7 @@
   box-sizing: border-box;
   background-color: var(--background-footer);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
+  @include br(4px);
   margin-right: 12px;
 }
 
